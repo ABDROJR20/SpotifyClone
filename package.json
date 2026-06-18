@@ -1,0 +1,15 @@
+{
+  "name": "spotify-clone-monorepo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node api/index.js",
+    "server": "cd api && npm start",
+    "client": "cd react-app && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd react-app && npm install && npm run build",
+    "vercel-build": "cd react-app && npm install && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

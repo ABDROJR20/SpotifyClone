@@ -22,7 +22,8 @@ const Home = () => {
     // Fetch songs from API
     const fetchSongs = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/songs`);
+        const apiUrl = import.meta.env.VITE_API_URL || '';
+        const response = await fetch(`${apiUrl}/api/songs`);
         if (response.ok) {
           const data = await response.json();
           setSongs(data);
