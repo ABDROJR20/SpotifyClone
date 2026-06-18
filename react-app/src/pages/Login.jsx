@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Music } from 'lucide-react';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -39,9 +38,7 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-zinc-900 to-black">
       <div className="w-full max-w-md p-8 space-y-8 bg-zinc-950/50 backdrop-blur-md border border-zinc-800 rounded-2xl shadow-2xl">
         <div className="flex flex-col items-center">
-          <div className="p-3 bg-green-500 rounded-full mb-4">
-            <Music className="w-8 h-8 text-black" />
-          </div>
+          <img src="/logo.png" alt="Spotify Logo" className="w-16 h-16 mb-4" />
           <h2 className="text-3xl font-bold text-white text-center">Log in to Spotify Clone</h2>
         </div>
         
