@@ -5,7 +5,7 @@ const Song = require('../models/Song');
 // Get all songs
 router.get('/', async (req, res) => {
   try {
-    const songs = await Song.find();
+    const songs = await Song.find().sort({ id: 1 });
     res.json(songs);
   } catch (err) {
     console.error(err.message);
